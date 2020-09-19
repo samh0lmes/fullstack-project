@@ -3,6 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import SearchForm from './forms/SearchForm';
+import ImagesList from './components/ImagesList';
 import './styles.css';
 
 export default () => {
@@ -21,5 +22,5 @@ export default () => {
     )
   }
 
-  return <h1>Some Results</h1>
+  return <ImagesList images={ searchResults } />
 };

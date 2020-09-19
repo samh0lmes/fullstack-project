@@ -1,29 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useState, useReducer, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import FormControl from 'react-bootstrap/FormControl';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { imagesDataReducer } from '../reducers/imagesDataReducer';
 import { searchImages } from '../api';
 import './styles.css';
 
 const SearchForm = (props) => {
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [data, dispatch] = useReducer(imagesDataReducer, { searchResults: [], error: null });
+  const { setSearchResults } = props;
 
   const handleSubmit = () => {
     searchImages(searchTerm)
       .then(response => {
         dispatch({ type: 'SET_IMAGES_LIST', searchResults: response.data });
       })
-      .catch(() => {
-        dispatch({ type: 'SET_ERROR' });
+      .catch((error) => {
+        dispatch({ type: 'SET_ERROR', error: error.response.data.message });
       });
   }
 
+  // submit form when user hits enter
   const handleKeyPress = (target) => {
     const enterCharCode = 13;
     if (target.charCode === enterCharCode) {
@@ -36,8 +36,8 @@ const SearchForm = (props) => {
   };
 
   useEffect(() => (
-    props.setSearchResults(data.searchResults)
-  ), [data.searchResults]);
+    setSearchResults(data.searchResults)
+  ), [data.searchResults, setSearchResults]);
 
   return (
     <Container className='searchForm'>
@@ -50,13 +50,13 @@ const SearchForm = (props) => {
       onKeyPress={ (e) => handleKeyPress(e) }
     />
         <Button onClick={ handleSubmit }>Search</Button>
-        {data.error && <div className="error">Error</div>}
+        {data.error && <div className="error">{ data.error }</div>}
       </Container>
   );
 }
 
 SearchForm.propTypes = {
-  setSearchTerm: PropTypes.func.isRequired
+  setSearchResults: PropTypes.func.isRequired
 }
 
 export default SearchForm;
