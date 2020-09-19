@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "type": "gif",
+      "id": "ES4Vcv8zWfIt2",
+      "url": "https://giphy.com/gifs/ES4Vcv8zWfIt2",
+      "slug": "ES4Vcv8zWfIt2",
+      "bitly_gif_url": "http://gph.is/1jABZXu",
+      "bitly_url": "http://gph.is/1jABZXu",
+      "embed_url": "https://giphy.com/embed/ES4Vcv8zWfIt2",
+      "username": "hoppip",
+      "source": "http://hoppip.tumblr.com/post/83110954053",
+      "title": "cat coffee GIF by hoppip",
+      "rating": "g",
+      "content_url": "",
+      "tags": [],
+      "featured_tags": [],
+      "user_tags": [],
+      "source_tld": "hoppip.tumblr.com",
+      "source_post_url": "http://hoppip.tumblr.com/post/83110954053",
+      "is_sticker": 0,
+      "import_datetime": "2014-06-19 11:32:22",
+      "trending_datetime": "2019-02-05 04:15:02",
+      "images": {
+        "original": {
+          "height": "500",
+          "width": "500",
+          "size": "454435",
+          "url": "https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif",
+          "mp4_size": "96902",
+          "mp4": "https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.mp4?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.mp4",
+          "webp_size": "327770",
+          "webp": "https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.webp?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.webp",
+          "frames": "30",
+          "hash": "323254e4d39d8bac1589ca5e55b8be3a"
+        }
+      }
+    },
+    {
+      "type": "gif",
+      "id": "13CoXDiaCcCoyk",
+      "url": "https://giphy.com/gifs/wiggle-shaq-13CoXDiaCcCoyk",
+      "slug": "wiggle-shaq-13CoXDiaCcCoyk",
+      "bitly_gif_url": "http://gph.is/Q4BXP3",
+      "bitly_url": "http://gph.is/Q4BXP3",
+      "embed_url": "https://giphy.com/embed/13CoXDiaCcCoyk",
+      "username": "",
+      "source": "http://tumblr.4gifs.com/post/84766399414/cat-shaq-wiggles",
+      "title": "funny cat GIF",
+      "rating": "g",
+      "content_url": "",
+      "tags": [],
+      "featured_tags": [],
+      "user_tags": [],
+      "source_tld": "tumblr.4gifs.com",
+      "source_post_url": "http://tumblr.4gifs.com/post/84766399414/cat-shaq-wiggles",
+      "is_sticker": 0,
+      "import_datetime": "2014-05-04 22:56:13",
+      "trending_datetime": "2016-03-04 20:45:01",
+      "images": {
+        "original": {
+          "height": "332",
+          "width": "400",
+          "size": "2028508",
+          "url": "https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif",
+          "mp4_size": "869558",
+          "mp4": "https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.mp4?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.mp4",
+          "webp_size": "849834",
+          "webp": "https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.webp?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.webp",
+          "frames": "44",
+          "hash": "1ec35ab1efd1d8fada033cb5ab546d66"
+        }
+      }
+    }
+  ]
+}
