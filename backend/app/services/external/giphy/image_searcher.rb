@@ -25,14 +25,15 @@ module External
       def map_images(full_images)
         full_images.map do |image|
           {
-            src: image['images']['original']['url'],
+            id: image['id'],
+            src: image['images']['fixed_width']['url'],
             title: image['title']
           }
         end
       end
 
       def full_url
-        "#{GIPHY_BASE_URL}#{IMAGE_SEARCH_ENDPOINT}?api_key=#{api_key}&q=#{search_term}"
+        "https://api.giphy.com/v1/gifs/search?api_key=#{api_key}&q=#{search_term}"
       end
 
       def api_key

@@ -9,9 +9,10 @@ import { searchImages } from '../api';
 import './styles.css';
 
 const SearchForm = (props) => {
+  const { searchResults, setSearchResults } = props;
+
   const [searchTerm, setSearchTerm] = useState('');
-  const [data, dispatch] = useReducer(imagesDataReducer, { searchResults: [], error: null });
-  const { setSearchResults } = props;
+  const [data, dispatch] = useReducer(imagesDataReducer, { searchResults, error: null });
 
   const handleSubmit = () => {
     searchImages(searchTerm)
@@ -42,21 +43,28 @@ const SearchForm = (props) => {
   return (
     <Container className='searchForm'>
       <FormControl
-      className='searchTermInput'
-      placeholder="Get creative :)"
-      aria-label="Enter a search term"
-      aria-describedby="searchTerm"
-      onChange={ handleSearchInputChange }
-      onKeyPress={ (e) => handleKeyPress(e) }
-    />
-        <Button onClick={ handleSubmit }>Search</Button>
-        {data.error && <div className="error">{ data.error }</div>}
-      </Container>
+        className='searchTermInput'
+        placeholder="Get creative :)"
+        aria-label="Enter a search term"
+        aria-describedby="searchTerm"
+        onChange={ handleSearchInputChange }
+        onKeyPress={ (e) => handleKeyPress(e) }
+      />
+      <Button onClick={ handleSubmit }>Search</Button>
+      {data.error && <div className="error">{ data.error }</div>}
+    </Container>
   );
 }
 
 SearchForm.propTypes = {
-  setSearchResults: PropTypes.func.isRequired
-}
+  setSearchResults: PropTypes.func.isRequired,
+  searchResults: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      src: PropTypes.string,
+      title: PropTypes.string,
+    })
+  )
+};
 
 export default SearchForm;

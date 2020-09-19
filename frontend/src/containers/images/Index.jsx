@@ -15,12 +15,17 @@ export default () => {
         <Container className='initialSearchForm'>
           <h1>Everlywell Image Catalog</h1>
           <Row>
-            <SearchForm setSearchResults={ (searchTerm) => setSearchResults(searchTerm) }/>
+            <SearchForm setSearchResults={ (searchTerm) => setSearchResults(searchTerm) } searchResults={ searchResults }/>
           </Row>
         </Container>
       </Jumbotron>
     )
   }
 
-  return <ImagesList images={ searchResults } />
+  return (
+    <Container>
+      <SearchForm setSearchResults={ (searchTerm) => setSearchResults(searchTerm) } searchResults={ searchResults }/>
+      <ImagesList images={ searchResults } />
+    </Container>
+  );
 };

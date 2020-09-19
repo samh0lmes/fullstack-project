@@ -9,7 +9,7 @@ const ImageTile = (props) => {
   return (
     <Container>
       <Row>
-        <Image src={ props.src } rounded />
+        <Image src={ props.src } rounded fluid />
         <h3>{ props.title }</h3>
       </Row>
     </Container>

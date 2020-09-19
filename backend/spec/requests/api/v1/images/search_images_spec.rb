@@ -22,17 +22,17 @@ describe 'get /api/v1/images/search', type: :request do
       get "/api/v1/images/search?search_term=#{search_term}"
 
       expect(response.status).to be 200
-      expect(JSON.parse(response.body)).to eq({
-        'images' => [
-          {
-            'src' => 'https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
+      expect(JSON.parse(response.body['images'])).to match_array({
+        {
+          'id' => 'ES4Vcv8zWfIt2',
+          'src' => 'https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
             'title' => 'cat coffee GIF by hoppip'
-          },
-          {
-            'src' => 'https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
+        },
+        {
+          'id' => '13CoXDiaCcCoyk',
+          'src' => 'https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
             'title' => 'funny cat GIF'
-          }
-        ]
+        }
       })
     end
   end
