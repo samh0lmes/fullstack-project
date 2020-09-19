@@ -16,7 +16,7 @@ const SearchForm = (props) => {
   const handleSubmit = () => {
     searchImages(searchTerm)
       .then(response => {
-        dispatch({ type: 'SET_IMAGES_LIST', searchResults: response.data });
+        dispatch({ type: 'SET_IMAGES_LIST', searchResults: response.data.images });
       })
       .catch((error) => {
         dispatch({ type: 'SET_ERROR', error: error.response.data.message });
