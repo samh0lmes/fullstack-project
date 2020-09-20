@@ -1,6 +1,6 @@
 module Images
   module Favorites
-    class UserImageFavoriter
+    class UserImageFavoritor
       def self.favorite!(user_id:, image:)
         new(user_id: user_id, image: image).favorite!
       end
@@ -21,6 +21,10 @@ module Images
       end
 
       private
+
+      def user
+        User.find_by!(id: user_id)
+      end
 
       attr_reader :user_id, :external_id, :src, :title
     end
