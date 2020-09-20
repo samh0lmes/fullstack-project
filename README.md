@@ -36,14 +36,15 @@ Rails/React coding project for full-stack developer candidates
 
 #### Backend
 1. `$ cd backend`
-2.  `$ bundle install && yarn install`
-3.  Ensure postgres is running
+2.  Add the `.env` file provided via email
+3.  `$ bundle install && yarn install`
+4.  Ensure postgres is running
     - `$ brew services start postgresql`
-4.  Create the db
-    - `$ rake db:create`
-5.  Start the server
+5.  Create the db
+    - `$ rake db:create && rake db:migrate`
+6.  Start the server
     - `$ rails s`
-6. Your backend will be running on port 3010 by default
+7. Your backend will be running on port 3010 by default
 
 #### Frontend
 1. `$ cd frontend`
