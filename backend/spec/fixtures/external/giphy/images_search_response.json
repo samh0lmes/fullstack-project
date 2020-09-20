@@ -22,9 +22,9 @@
       "import_datetime": "2014-06-19 11:32:22",
       "trending_datetime": "2019-02-05 04:15:02",
       "images": {
-        "original": {
+        "fixed_width": {
           "height": "500",
-          "width": "500",
+          "width": "200",
           "size": "454435",
           "url": "https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif",
           "mp4_size": "96902",
@@ -58,9 +58,9 @@
       "import_datetime": "2014-05-04 22:56:13",
       "trending_datetime": "2016-03-04 20:45:01",
       "images": {
-        "original": {
+        "fixed_width": {
           "height": "332",
-          "width": "400",
+          "width": "200",
           "size": "2028508",
           "url": "https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif",
           "mp4_size": "869558",

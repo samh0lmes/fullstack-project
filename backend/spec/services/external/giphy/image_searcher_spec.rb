@@ -17,7 +17,7 @@ module External
               id: 1,
               title: 'Dancing Cat',
               images: {
-                original: {
+                fixed_width: {
                   url: 'dancing_cat.gif'
                 }
               }
@@ -32,7 +32,7 @@ module External
           with("https://api.giphy.com/v1/gifs/search?api_key=#{api_key}&q=cat").
           and_return(OpenStruct.new(body: search_results.to_json))
 
-          expect(ImageSearcher.search_images!('cat')).to eq([{ id: 1, src: 'dancing_cat.gif', title: 'Dancing Cat' }])
+          expect(ImageSearcher.search_images!('cat')).to eq([{ external_id: 1, src: 'dancing_cat.gif', title: 'Dancing Cat' }])
       end
     end
   end

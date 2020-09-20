@@ -25,7 +25,7 @@ module External
       def map_images(full_images)
         full_images.map do |image|
           {
-            id: image['id'],
+            external_id: image['id'],
             src: image['images']['fixed_width']['url'],
             title: image['title']
           }

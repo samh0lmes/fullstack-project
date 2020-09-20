@@ -12,7 +12,7 @@ const ImagesList = (props) => {
       <Row>
         {
           props.images.map((image) => (
-            <Col key={image.id} xs={6} md={4}>
+            <Col key={image.external_id} xs={6} md={4}>
               <ImageTile src={image.src} title={image.title}/>
             </Col>
           ))
@@ -25,7 +25,7 @@ const ImagesList = (props) => {
 ImagesList.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      external_id: PropTypes.string,
       src: PropTypes.string,
       title: PropTypes.string,
     })

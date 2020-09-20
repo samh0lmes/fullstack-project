@@ -17,6 +17,7 @@ const ImageTile = (props) => {
 }
 
 ImageTile.propTypes = {
+  external_id: PropTypes.string,
   src: PropTypes.string,
   title: PropTypes.string
 };
