@@ -26,12 +26,14 @@ describe 'get /api/v1/images/search', type: :request do
         {
           'external_id' => 'ES4Vcv8zWfIt2',
           'src' => 'https://media3.giphy.com/media/ES4Vcv8zWfIt2/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
-          'title' => 'cat coffee GIF by hoppip'
+          'title' => 'cat coffee GIF by hoppip',
+          'favorited' => false
         },
         {
           'external_id' => '13CoXDiaCcCoyk',
           'src' => 'https://media1.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=96ebb03bgccnaj0w9dn6kfyxcybuygphb0s3ju6g5wkrhruy&rid=giphy.gif',
-          'title' => 'funny cat GIF'
+          'title' => 'funny cat GIF',
+          'favorited' => false
         }
       ])
     end
