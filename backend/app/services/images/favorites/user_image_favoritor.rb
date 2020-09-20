@@ -1,6 +1,6 @@
 module Images
   module Favorites
-    class UserImageFavoritor
+    class UserImageFavoriter
       def self.favorite!(user_id:, image:)
         new(user_id: user_id, image: image).favorite!
       end

@@ -1,6 +1,6 @@
 module Images
   module Favorites
-    class UserImageUnfavoritor
+    class UserImageUnfavoriter
       def self.unfavorite!(user_id:, external_id:)
         new(user_id: user_id, external_id: external_id).unfavorite!
       end

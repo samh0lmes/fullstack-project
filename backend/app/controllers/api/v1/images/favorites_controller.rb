@@ -9,13 +9,13 @@ module Api
         end
 
         def create
-          ::Images::Favorites::UserImageFavoritor.favorite!(user_id: session[:user_id], image: params[:image])
+          ::Images::Favorites::UserImageFavoriter.favorite!(user_id: session[:user_id], image: params[:image])
 
           render json: {}, status: 201
         end
 
         def destroy
-          ::Images::Favorites::UserImageUnfavoritor.unfavorite!(user_id: session[:user_id], external_id: params[:id])
+          ::Images::Favorites::UserImageUnfavoriter.unfavorite!(user_id: session[:user_id], external_id: params[:id])
 
           render json: {}, status: 204
         end
