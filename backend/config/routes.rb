@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       namespace :images do
-        get 'search'
+        get 'search', to: 'search#search'
+
+        resources :favorites, only: [:index, :create,  :destroy]
       end
     end
   end
