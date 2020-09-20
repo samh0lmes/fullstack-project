@@ -6,3 +6,38 @@
   height: 100vh;
 }
 
+.imageTileContainer {
+  display: flex;
+  margin: 24px;
+}
+
+.imageTileRow {
+  height: 200px;
+  justify-content: center;
+}
+
+.imageTile {
+  height: 100%;
+  width: 100%;
+}
+
+.imageTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchTermInput {
+  width: auto;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-left: 14px;
+}

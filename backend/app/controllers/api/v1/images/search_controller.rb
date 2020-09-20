@@ -3,7 +3,7 @@ module Api
     module Images
       class SearchController < ApplicationController
         def search
-          images = External::Giphy::ImageSearcher.search_images!(params[:search_term])
+          images = External::Giphy::ImageSearcher.search_images!(search_term: params[:search_term], user_id: session[:user_id])
 
           render json: { images: images }, status: 200
         rescue RestClient::ExceptionWithResponse => e

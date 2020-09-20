@@ -5,7 +5,7 @@ module Api
         def index
           user = User.find_by!(id: session[:user_id])
 
-          render json: { images: user.favorite_images }, status: 200
+          render json: { images: user.mapped_favorite_images }, status: 200
         end
 
         def create

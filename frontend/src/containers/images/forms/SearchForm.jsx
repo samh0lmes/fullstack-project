@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { imagesDataReducer } from '../reducers/imagesDataReducer';
 import { searchImages } from '../api';
-import './styles.css';
+import '../styles.css';
 
 const SearchForm = (props) => {
   const { searchResults, setSearchResults } = props;
@@ -38,7 +38,7 @@ const SearchForm = (props) => {
 
   useEffect(() => (
     setSearchResults(data.searchResults)
-  ), [data.searchResults, setSearchResults]);
+  ), [data.searchResults]);
 
   return (
     <Container className='searchForm'>
@@ -60,7 +60,8 @@ SearchForm.propTypes = {
   setSearchResults: PropTypes.func.isRequired,
   searchResults: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      external_id: PropTypes.string,
+      favorited: PropTypes.bool,
       src: PropTypes.string,
       title: PropTypes.string,
     })

@@ -4,12 +4,13 @@ module External
       GIPHY_BASE_URL = 'https://api.giphy.com/v1/gifs'
       IMAGE_SEARCH_ENDPOINT = '/search'
 
-      def self.search_images!(search_term)
-        new(search_term).search_images!
+      def self.search_images!(search_term:, user_id:)
+        new(search_term: search_term, user_id: user_id).search_images!
       end
 
-      def initialize(search_term)
+      def initialize(search_term:, user_id:)
         @search_term = search_term
+        @user_id = user_id
       end
 
       def search_images!
@@ -27,9 +28,18 @@ module External
           {
             external_id: image['id'],
             src: image['images']['fixed_width']['url'],
-            title: image['title']
+            title: image['title'],
+            favorited: favorited_images_external_ids.include?(image['id'])
           }
         end
+      end
+
+      def favorited_images_external_ids
+        @favorited_images_external_ids ||= user.favorite_images.pluck(:external_id)
+      end
+
+      def user
+        User.find_by!(id: user_id)
       end
 
       def full_url
@@ -40,7 +50,7 @@ module External
         ENV.fetch('GIPHY_API_KEY')
       end
 
-      attr_reader :search_term
+      attr_reader :search_term, :user_id
     end
   end
 end
